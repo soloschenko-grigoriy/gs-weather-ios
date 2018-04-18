@@ -3,6 +3,5 @@ use_frameworks!
 
 target 'gs-weather-ios' do
   pod 'Alamofire'
-  pod 'SwiftyJSON'
 end
 
