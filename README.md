@@ -18,8 +18,7 @@ cmd + u
 * Screens: Thin as possible controllers to represent particular screens. Should avoid containing bussiness logic
 * Services: Mappers, Gates (Networking, Notification, Location etc), Theming, Logging etc. 
 * Helpers. Reusable extentions and additions
-* No-storyboard policy. Even though storyboard is awesome prototyping and visualization tool it should be avoided in case of:               *   Mid-large project 
-*   Team of devs contains more that one person
+* No-storyboard policy. Even though storyboard is awesome prototyping and visualization tool it should be avoided in case of  a) Mid-large project b) Team of devs contains more that one person
 
 ## Todo
 * Request location from user
