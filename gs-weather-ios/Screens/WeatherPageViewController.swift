@@ -9,7 +9,11 @@
 import UIKit
 
 class WeatherPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+    // List of controllers in this Page controller
     var controllers: [UIViewController] = []
+    
+    // Available bg colors for each controller
+    // @todo Move it dedicated ThemeService
     let colors = [
         UIColor(red:1.00, green:0.22, blue:0.38, alpha:1.0),
         UIColor(red:0.20, green:0.45, blue:0.86, alpha:1.0),
@@ -30,9 +34,8 @@ class WeatherPageViewController: UIPageViewController, UIPageViewControllerDataS
             controller.view.backgroundColor = colors[index]
         }
         
+        // Setup first controller
         setViewControllers([controllers[0]], direction: .forward, animated: true, completion: nil)
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,9 +54,8 @@ class WeatherPageViewController: UIPageViewController, UIPageViewControllerDataS
         }
         
         return controllers[index-1]
-        
     }
-    
+
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard let index = controllers.index(of: viewController) else {
             return nil

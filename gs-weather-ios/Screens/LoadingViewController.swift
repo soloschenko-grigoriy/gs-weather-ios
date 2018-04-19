@@ -32,6 +32,7 @@ class LoadingViewController: UIViewController {
         for item in weatherItems {
             pageVC.controllers.append(WeatherViewController(weather: item))
         }
+        
         present(pageVC, animated: true, completion: nil)
     }
     
